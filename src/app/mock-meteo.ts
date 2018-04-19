@@ -1,6 +1,6 @@
-import { Meteo } from './meteo';
+import { Town } from './town';
 
-export const METEOS: Hero[] = [
+export const METEOS: Town[] = [
   { id: 11, name: 'Paris' },
   { id: 12, name: 'Belfort' },
   { id: 13, name: 'Compiègne' },

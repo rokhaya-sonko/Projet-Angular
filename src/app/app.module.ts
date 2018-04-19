@@ -8,8 +8,9 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { AppComponent } from './app.component';
 import { MeteoComponent } from './meteo/meteo.component';
 import { Component, OnInit } from '@angular/core';
-import { Meteo } from '../meteo';
+import { Town } from '../town';
 import { MessageService } from './message.service';
+import {MeteoService} from './meteo.service'
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
 
