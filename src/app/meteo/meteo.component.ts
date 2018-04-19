@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Town } from '../town';
-import { MeteoService } from '../meteo.service';
+import { TownService } from '../town.service';
 
 @Component({
   selector: 'app-meteo',
@@ -12,9 +11,9 @@ export class MeteoComponent implements OnInit {
 
   selectedTown: Town;
 
-  towns: Town[];
+  meteo: Town[];
 
-  constructor(private meteoService: MeteoService) { }
+  constructor(private townService: TownService) { }
 
   ngOnInit() {
     this.getTowns();
@@ -25,7 +24,7 @@ export class MeteoComponent implements OnInit {
   }
 
   getTowns(): void {
-    this.meteoService.getTowns()
-        .subscribe(towns=> this.towns = towns);
+    this.townService.getTowns()
+        .subscribe(meteo=> this.meteo= meteo);
   }
 }
