@@ -11,3 +11,4 @@ export class TownService {
     this.messageService.add('TownService: fetched meteo');
     return of();
   }
+}
