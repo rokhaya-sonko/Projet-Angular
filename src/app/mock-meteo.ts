@@ -1,14 +1,7 @@
 import { Town } from './town';
 
 export const METEOS: Town[] = [
-  { id: 11, name: 'Paris' },
-  { id: 12, name: 'Belfort' },
-  { id: 13, name: 'Compiègne' },
-  { id: 14, name: 'Dijon' },
-  { id: 15, name: 'Strasbourg' },
-  { id: 16, name: 'Grenoble' },
-  { id: 17, name: 'Auxerre' },
-  { id: 18, name: 'Sochaux' },
-  { id: 19, name: 'Marseille' },
-  { id: 20, name: 'Toulouse' }
+  { id: 11, name: 'Paris', icon: string, temperature: number },
+  { id: 12, name: 'Belfort',  icon: string, temperature: number},
+  { id: 13, name: 'Compiègne', icon: string, temperature: number}
 ];
