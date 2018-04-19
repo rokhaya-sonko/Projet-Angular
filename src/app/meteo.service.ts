@@ -13,6 +13,6 @@ export class MeteoService {
   getTowns(): Observable<Town[]> {
     // TODO: send the message _after_ fetching the heroes
     this.messageService.add('MeteoService: fetched towns');
-    return of(METEOS);
+    return of();
   }
 }
