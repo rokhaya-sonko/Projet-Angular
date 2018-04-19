@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import {  Town } from './town';
+import { METEOS } from './mock-meteos';
 import { MessageService } from './message.service';
 
 
@@ -13,6 +14,6 @@ export class TownService {
   getMeteo(): Observable<Town[]> {
     // TODO: send the message _after_ fetching the heroes
     this.messageService.add('TownService: fetched meteo');
-    return ();
+    return of (METEOS);
   }
 }
