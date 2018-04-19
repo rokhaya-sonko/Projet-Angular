@@ -14,7 +14,7 @@ export class MeteoComponent implements OnInit {
   selectedTown: Town;
   towns: Town[];
 
-
+}
 
   constructor(private meteoService: MeteoService) ) { }
 
@@ -32,4 +32,3 @@ getTowns(): void {
         .subscribe(towns => this.towns= towns);
   }
 
-}
