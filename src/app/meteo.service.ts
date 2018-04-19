@@ -3,7 +3,6 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Town} from './town';
-import { METEOS } from './mock-meteo';
 import { MessageService } from './message.service';
 
 @Injectable()
