@@ -6,7 +6,6 @@ import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { AppComponent } from './app.component';
-import { Town } from '../town';
 import { MeteoComponent } from './meteo/meteo.component';
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from './message.service';

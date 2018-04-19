@@ -16,7 +16,7 @@ export class MeteoComponent implements OnInit {
   constructor(private townService: TownService) { }
 
   ngOnInit() {
-    this.getTowns();
+    this.getMeteo();
   }
 
   onSelect(town: Town): void {
