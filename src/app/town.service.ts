@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import {  Town } from './town';
-import { METEOS } from './mock-meteos';
+import { METEOS } from './mock-meteo';
 import { MessageService } from './message.service';
 
 

@@ -23,8 +23,8 @@ export class MeteoComponent implements OnInit {
     this.selectedTown = town;
   }
 
-  getTowns(): void {
-    this.townService.getTowns()
+  getMeteo(): void {
+    this.townService.getMeteo()
         .subscribe(meteo=> this.meteo= meteo);
   }
 }
