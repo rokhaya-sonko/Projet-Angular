@@ -3,7 +3,6 @@
 </p>
 <mat-card class="example-card">
   <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title></mat-card-title>
     <mat-card-subtitle></mat-card-subtitle>
   </mat-card-header>
@@ -19,3 +18,11 @@
     <button mat-button>SHARE</button>
   </mat-card-actions>
 </mat-card>
+<h2>{{ town.name | uppercase }} Details</h2>
+<div><span>id: </span>{{town.id}}</div>
+<div><span>name: </span>{{town.name}}</div>
+<div>
+    <label>name:
+      <input [(ngModel)]="town.name" placeholder="name">
+    </label>
+</div>

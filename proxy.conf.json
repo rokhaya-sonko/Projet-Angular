@@ -1,0 +1,8 @@
+{
+  "/towns": {
+    "target": "http://lpa2sgadot.herokuapp.com",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}
