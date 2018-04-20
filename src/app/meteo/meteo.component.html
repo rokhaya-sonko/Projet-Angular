@@ -1,6 +1,6 @@
 <h2> Towns weather</h2>
 <ul class="town">
-  <li *ngFor="let meteo of towns"
+  <li *ngFor="let town of meteo"
     [class.selected]="town === selectedTown"
     (click)="onSelect(town)">
     <span class="badge">{{town.id}}</span> {{town.name}}
