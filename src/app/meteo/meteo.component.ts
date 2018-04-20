@@ -11,7 +11,7 @@ export class MeteoComponent implements OnInit {
 
   selectedTown: Town;
 
-  meteo: Town[];
+  meteo: Town[] = [];
 
   constructor(private townService: TownService) { }
 
