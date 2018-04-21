@@ -14,17 +14,24 @@ export class MeteoComponent implements OnInit {
   meteo: Town[] = [];
 
   constructor(private townService: TownService) { }
-
-  ngOnInit() {
-    this.getMeteo();
-  }
-
+  
+   ngOnInit() {
+     this.meteoService.getMeteobyid(1)
+        .subscribe(town => this.meteo[0] = town);
+   console.log(this.meteo);
+   }
+  
   onSelect(town: Town): void {
     this.selectedTown = town;
+    this.getMeteobyid(town.id);
   }
 
   getMeteo(): void {
     this.townService.getMeteo()
         .subscribe(meteo=> this.meteo= meteo);
   }
+  getMeteobyid(id: number): void {
+    this.meteoServiceService.getTown(id)
+        .subscribe(town => this.selectedTown = town);
+  
 }
