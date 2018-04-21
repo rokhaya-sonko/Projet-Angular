@@ -11,7 +11,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 @Injectable()
 export class TownService {
   
-  private townsUrl = 'https://rokhayasnk.herokuapp.com/towns';  // URL to web api
+  private townsUrl = https://projet-app.herokuapp.com/towns';  // URL to web api
   private jsonString = '.json';
 
   constructor(private http: HttpClient, private messageService: MessageService) { }
@@ -20,7 +20,15 @@ export class TownService {
   getMeteo (): Observable<Town[]> {
   return this.http.get<Town[]>(this.townsUrl)
 }
-  
+  /** GET town by id. Will 404 if id not found */
+  getMeteo(id: number): Observable<Town> {
+    const url = `${this.townsUrl}/${id}${this.jsonString}`;
+    return this.http.get<Town>(url).pipe(
+      tap(_ => this.log(`fetched town id=${id}`)),
+      catchError(this.handleError<Town>(`getMeteo id=${id}`))
+    );
+  }
+
   /** GET town by id. Return `undefined` when id not found */
   getMeteoNo404<Data>(id: number): Observable<Town> {
     const url = `${this.townsUrl}/?id=${id}${this.jsonString}`;
