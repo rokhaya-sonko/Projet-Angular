@@ -11,7 +11,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 @Injectable()
 export class TownService {
   
-  private townsUrl = 'https://projet-app.herokuapp.com/towns';  // URL to web api
+  private townsUrl = 'https://projet-app.herokuapp.com/towns/1';  // URL to web api
   private jsonString = '.json';
 
   constructor(private http: HttpClient, private messageService: MessageService) { }
