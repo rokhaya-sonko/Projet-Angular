@@ -35,3 +35,4 @@ export class MeteoComponent implements OnInit {
         .subscribe(town => this.selectedTown = town);
   
 }
+}
