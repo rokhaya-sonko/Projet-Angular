@@ -21,7 +21,7 @@ export class TownService {
   return this.http.get<Town[]>(this.townsUrl)
 }
   /** GET town by id. Will 404 if id not found */
-  getMeteo(id: number): Observable<Town> {
+  getMeteobyid(id: number): Observable<Town> {
     const url = `${this.townsUrl}/${id}${this.jsonString}`;
     return this.http.get<Town>(url).pipe(
       tap(_ => this.log(`fetched town id=${id}`)),
