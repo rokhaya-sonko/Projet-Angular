@@ -16,7 +16,7 @@ export class MeteoComponent implements OnInit {
   constructor(private townService: TownService) { }
   
    ngOnInit() {
-     this.meteoService.getMeteobyid(1)
+     this.townService.getMeteobyid(1)
         .subscribe(town => this.meteo[0] = town);
    console.log(this.meteo);
    }
@@ -31,7 +31,7 @@ export class MeteoComponent implements OnInit {
         .subscribe(meteo=> this.meteo= meteo);
   }
   getMeteobyid(id: number): void {
-    this.meteoServiceService.getMeteobyid(id)
+    this.townServiceService.getMeteobyid(id)
         .subscribe(town => this.selectedTown = town);
   
 }
