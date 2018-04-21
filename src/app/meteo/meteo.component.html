@@ -4,6 +4,8 @@
     [class.selected]="town === selectedTown"
     (click)="onSelect(town)">
     <span class="badge">{{town.id}}</span> {{town.name}}
+    <span class="badge">{{town.temperature}}</span> {{town.icon}}
+
   </li>
 </ul>
 
