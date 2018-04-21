@@ -29,20 +29,7 @@ export class TownService {
     );
   }
 
-  /** GET town by id. Return `undefined` when id not found */
-  getMeteoNo404<Data>(id: number): Observable<Town> {
-    const url = `${this.townsUrl}/?id=${id}${this.jsonString}`;
-    return this.http.get<Town[]>(url)
-      .pipe(
-        map(meteo => meteo[0]), // returns a {0|1} element array
-        tap(t => {
-          const outcome = t ? `fetched` : `did not find`;
-          this.log(`${outcome} town id=${id}`);
-        }),
-        catchError(this.handleError<Town>(`getTown id=${id}`))
-      );
-  }
- 
+
   /**
    * Handle Http operation that failed.
    * Let the app continue.
