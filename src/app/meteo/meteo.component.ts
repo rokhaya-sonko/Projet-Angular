@@ -31,7 +31,7 @@ export class MeteoComponent implements OnInit {
         .subscribe(meteo=> this.meteo= meteo);
   }
   getMeteobyid(id: number): void {
-    this.meteoServiceService.getTown(id)
+    this.meteoServiceService.getMeteobyid(id)
         .subscribe(town => this.selectedTown = town);
   
 }
