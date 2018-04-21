@@ -18,7 +18,7 @@ export class TownService {
   
   /** GET towns from the server */
   getMeteo (): Observable<Town[]> {
-  return this.http.get<Town[]>(this.townsUrl)
+  return this.http.get<Town[]>(this.townsUrl+this.jsonString)
 }
   /** GET town by id. 
   Will 404 if id not found */
