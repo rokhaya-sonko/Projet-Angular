@@ -20,12 +20,13 @@ export class TownService {
   getMeteo (): Observable<Town[]> {
   return this.http.get<Town[]>(this.townsUrl)
 }
-  /** GET town by id. Will 404 if id not found */
+  /** GET town by id. 
+  Will 404 if id not found */
   getMeteobyid(id: number): Observable<Town> {
     const url = `${this.townsUrl}/${id}${this.jsonString}`;
     return this.http.get<Town>(url).pipe(
       tap(_ => this.log(`fetched town id=${id}`)),
-      catchError(this.handleError<Town>(`getMeteo id=${id}`))
+      catchError(this.handleError<Town>(`getMeteobyid id=${id}`))
     );
   }
 
